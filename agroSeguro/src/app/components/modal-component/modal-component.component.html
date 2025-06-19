@@ -1,0 +1,12 @@
+<div class="containerModal" *ngIf="isVisible">
+  <div class="customModal generalShadow">
+    <div class="infoModal">
+      <i [class]="'bi ' + iconClass" [style.color]="iconColor" style="font-size:45px"></i>
+      <h1 class="titleModal">{{ title }}</h1>
+      <p class="descriptionModal">{{ description }}</p> 
+      <div class="buttonsModal">
+        <div class="button generalShadow" [style.backgroundColor]="iconColor" (click)="onButtonClick()">{{ buttonText }}</div>
+      </div>
+    </div>
+  </div>
+</div>
