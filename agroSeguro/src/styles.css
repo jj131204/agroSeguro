@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --green: #2D6A4F;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat-regular', sans-serif;
+    text-decoration: none;
+    outline: none; 
+    user-select: none;
+}
+
+body{
+    background-color: #f8f8f8 !important;
+    height: 100%;
+}
+
+.borderRadius {
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+
+.generalShadow {
+    -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}

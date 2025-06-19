@@ -1,0 +1,39 @@
+header{
+    background-color: var(--green);
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    padding: 0 5%;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    img{
+        width: 50px;
+    }
+    span{
+        color: #FFFFFF;
+        font-family: "Open Sans", sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+    }
+}
+
+.right{
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    a{
+        color: #FFFFFF;
+        font-family: "Open Sans", sans-serif;
+        text-decoration: none;  
+    }
+}
+
+.marginHeader{
+    height: 60px;
+}
