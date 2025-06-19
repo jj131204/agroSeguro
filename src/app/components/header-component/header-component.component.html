@@ -1,0 +1,34 @@
+<div class="containerHeader">
+  <header class="d-flex justify-content-between align-items-center width-page">
+    <a href="/agroSeguro/" class="left" style="text-decoration: none;">
+      <img src="/agroSeguro/images/logo.png" alt="">
+      <span>AgroSeguro</span>
+    </a>
+
+    <!-- <div class="right"  *ngIf="!isLoggedIn" [ngClass]="{
+        'openMenu': isDivOpen, 
+        'closeMenu': !isDivOpen
+      }">
+      <a href="/agroSegurologin">Iniciar sesión</a>
+      <a href="/agroSeguroregister">Registrarse</a>
+    </div> -->
+
+    <div class="right" [ngClass]="{
+        'openMenu': isDivOpen, 
+        'closeMenu': !isDivOpen
+      }">
+      <a href="/agroSeguro/agroSeguro">Inicio</a>
+      <a href="/agroSeguro/panel">Historial</a>
+      <a href="/agroSeguro/profile">Perfil</a>
+      <!-- <a href="/history">Zona IA</a> -->
+      <a href="">Cerrar sesión</a>
+    </div>
+
+    <i #open class="bi whiteColor icon-transition visibility"  open="false" (click)="openMenu()"
+      [ngClass]="{'show-list': !isDivOpen, 'show-x': isDivOpen}">
+      <span class="icon-list bi bi-list"></span>
+      <span class="icon-x bi bi-x"></span>
+    </i>
+  </header>
+</div>
+<div class="marginHeader"></div>

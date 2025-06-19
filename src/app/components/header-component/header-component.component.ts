@@ -16,6 +16,7 @@ export class HeaderComponentComponent implements OnInit {
   mostrarHeader: boolean = true;
   isLoggedIn: boolean = false;
   userName: string | null = null;
+  isDivOpen: boolean = false;
 
   constructor(
     private authService: AuthServiceService,
@@ -37,6 +38,10 @@ export class HeaderComponentComponent implements OnInit {
 
   checkLoginStatus(): void {
     this.isLoggedIn = this.authService.isLoggedIn();
+  }
+
+  openMenu() {
+    this.isDivOpen = !this.isDivOpen; 
   }
 
 }

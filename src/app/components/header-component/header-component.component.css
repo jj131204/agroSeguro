@@ -1,0 +1,124 @@
+.containerHeader{
+    background-color: var(--green);
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    padding: 0;
+    display: flex;
+    z-index: 100000;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    img{
+        width: 50px;
+    }
+    span{
+        color: #FFFFFF;
+        font-family: "Open Sans", sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+    }
+}
+
+.right{
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+    a{
+        color: #FFFFFF;
+        font-family: "Open Sans", sans-serif;
+    }
+}
+
+.marginHeader{
+    height: 60px;
+}
+
+.whiteColor{
+    color: #FFFFFF;
+}
+
+.visibility{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .visibility{
+        display: block;
+    }
+    .right{
+        position: fixed;
+        top: 60px;
+        right: -100vw;
+        background-color: #FFFFFF;
+        width: 100%;
+        flex-direction: column;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+        row-gap: 20px;
+        padding: 30px;
+        transition: right 1s ease-in-out;
+        a{
+            color: var(--green);
+        }
+    }
+
+    /* Estilos base para el contenedor del icono */
+    .icon-transition {
+        position: relative; /* Necesario para posicionar los spans */
+        display: inline-block; /* Para que el contenedor sea del tamaño de su contenido */
+        width: 24px; /* Asegura un ancho y alto fijo para evitar saltos */
+        height: 24px;
+        overflow: hidden; /* Oculta partes que sobresalgan durante la animación */
+    }
+
+    .icon-transition .icon-list,
+    .icon-transition .icon-x {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 24px; 
+        color: var(--blue1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        opacity: 0;         
+        transform: scale(0.5);
+        transition: opacity 0.5s ease-out, transform 1s ease-out; 
+    }
+
+    .icon-transition.show-list .icon-list {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .icon-transition.show-list .icon-x {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    .icon-transition.show-x .icon-x {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .icon-transition.show-x .icon-list {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    .closeMenu{
+        right: -100vw;
+    }
+
+    .openMenu{
+        right: 0;
+    }
+}

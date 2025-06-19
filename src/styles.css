@@ -32,7 +32,7 @@ body{
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 }
 .width-page{
-    width: 100%;
+    width: 90%;
     max-width: 1200px;
     margin: auto;
 }
