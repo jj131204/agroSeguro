@@ -1,25 +1,32 @@
-<div class="min-height width-page">
-    <div class="header-container">
-        <h1 class="panel-title">Panel de Monitoreo</h1>
-        <p class="last-update">📅 Fecha y hora último monitoreo: miércoles, 18 de junio de 2025 - 08:00 AM</p>
-    </div>
+<div class="min-height width-page" *ngIf="isLoggedIn">
+  <div class="header-container">
+    <h1 class="panel-title">Panel de Monitoreo</h1>
+    <p class="last-update">
+      📅 Fecha y hora último monitoreo: {{ ultimaFecha }} - {{ ultimaHora }}
+    </p>
+  </div>
 
-    <div class="cards-container">
-        <div class="card generalShadow borderRadius" >
-            <div class="card-icon icon-temperatura">🌡️</div>
-            <div class="card-label">Temperatura</div>
-            <div class="card-value">25°C</div>
-        </div>
-        <div class="card generalShadow borderRadius" >
-            <div class="card-icon icon-humedad">💧</div>
-            <div class="card-label">Humedad</div>
-            <div class="card-value">70%</div>
-        </div>
-        <div class="card generalShadow borderRadius" >
-            <div class="card-icon icon-alerta">⚠️</div>
-            <div class="card-label">Alerta</div>
-            <div class="card-value">Sin anomalías</div>
-        </div>
+  <div class="cards-container">
+    <div class="card generalShadow borderRadius">
+      <div class="card-icon icon-temperatura">🌡️</div>
+      <div class="card-label">Temperatura</div>
+      <div class="card-value">{{ ultimaTemp }}°C</div>
     </div>
-    <div class="" style="height: 60px;"></div>
+    <div class="card generalShadow borderRadius">
+      <div class="card-icon icon-humedad">💧</div>
+      <div class="card-label">Humedad</div>
+      <div class="card-value">{{ ultimaHum }}%</div>
+    </div>
+    <div class="card generalShadow borderRadius">
+      <div class="card-icon icon-alerta">⚠️</div>
+      <div class="card-label">Alerta</div>
+      <div class="card-value">{{ alerta }}</div>
+    </div>
+  </div>
+
+  <div style="height: 60px;"></div>
+</div>
+
+<div *ngIf="!isLoggedIn">
+  <!-- O puedes dejar esto vacío -->
 </div>

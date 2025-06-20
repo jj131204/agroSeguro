@@ -1,27 +1,27 @@
 <div class="containerHeader">
   <header class="d-flex justify-content-between align-items-center width-page">
     <a href="/agroSeguro/" class="left" style="text-decoration: none;">
-      <img src="/agroSeguro/images/logo.png" alt="">
+      <img src="/images/logo.png" alt="">
       <span>AgroSeguro</span>
     </a>
 
-    <!-- <div class="right"  *ngIf="!isLoggedIn" [ngClass]="{
+    <div class="right"  *ngIf="!isLoggedIn" [ngClass]="{
         'openMenu': isDivOpen, 
         'closeMenu': !isDivOpen
       }">
       <a href="/agroSegurologin">Iniciar sesión</a>
       <a href="/agroSeguroregister">Registrarse</a>
-    </div> -->
+    </div>
 
-    <div class="right" [ngClass]="{
+    <div class="right" *ngIf="isLoggedIn" [ngClass]="{
         'openMenu': isDivOpen, 
         'closeMenu': !isDivOpen
       }">
-      <a href="/agroSeguro/agroSeguro">Inicio</a>
-      <a href="/agroSeguro/panel">Historial</a>
-      <a href="/agroSeguro/profile">Perfil</a>
+      <a href="">Inicio</a>
+      <a href="/panel">Historial</a>
+      <a href="/profile">Perfil</a>
       <!-- <a href="/history">Zona IA</a> -->
-      <a href="">Cerrar sesión</a>
+      <a (click)="logout()">Cerrar sesión</a>
     </div>
 
     <i #open class="bi whiteColor icon-transition visibility"  open="false" (click)="openMenu()"

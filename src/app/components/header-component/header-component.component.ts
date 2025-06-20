@@ -44,4 +44,10 @@ export class HeaderComponentComponent implements OnInit {
     this.isDivOpen = !this.isDivOpen; 
   }
 
+  logout(): void {
+    console.log("cerrando...")
+    localStorage.removeItem('token');
+    location.reload();
+    
+  }
 }

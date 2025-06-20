@@ -9,7 +9,8 @@ import { filter } from 'rxjs';
   imports: [
     CommonModule,
     RouterOutlet,
-    HeaderComponentComponent
+    HeaderComponentComponent,
+    
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

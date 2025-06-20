@@ -16,7 +16,8 @@ export class AuthServiceService {
   ) { }
 
   isLoggedIn(): boolean {
-    return this.cookieService.check(this.LOGIN_COOKIE_NAME);
+    return !!localStorage.getItem('token');
   }
+
 
 }
