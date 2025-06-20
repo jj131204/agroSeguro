@@ -48,6 +48,7 @@ export class HeaderComponentComponent implements OnInit {
     console.log("cerrando...")
     localStorage.removeItem('token');
     location.reload();
+    this.router.navigate(['/login']);
     
   }
 }

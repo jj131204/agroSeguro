@@ -42,3 +42,4 @@ export class PanelComponent implements OnInit {
     return 'Sin anomalias';
   }
 }
+
